@@ -1,0 +1,16 @@
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\bin\Debug\net9.0-windows\Course-Project-OOP.exe
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\bin\Debug\net9.0-windows\Course-Project-OOP.deps.json
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\bin\Debug\net9.0-windows\Course-Project-OOP.runtimeconfig.json
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\bin\Debug\net9.0-windows\Course-Project-OOP.dll
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\bin\Debug\net9.0-windows\Course-Project-OOP.pdb
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.AssemblyInfoInputs.cache
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.AssemblyInfo.cs
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.csproj.CoreCompileInputs.cache
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.dll
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\refint\Course-Project-OOP.dll
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.pdb
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.genruntimeconfig.cache
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\ref\Course-Project-OOP.dll
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course_Project_OOP.Form1.resources
+C:\Users\dicke_o8q2upp\RiderProjects\Course-Project-OOP\Course-Project-OOP\obj\Debug\net9.0-windows\Course-Project-OOP.csproj.GenerateResource.cache
