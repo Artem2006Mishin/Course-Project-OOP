@@ -3,21 +3,24 @@ using Models;
 
 public partial class Form1 : Form
 {
-    private readonly Hospital _hospital;
-    private readonly MainView _view1;
-    private readonly CreatePatientView _view2;
+    private readonly HospitalRegistry _registry;
+    private readonly MainView _mainView;
+    private readonly CreatePatientView _createPatientView;
+    private readonly CreateHospitalView _createHospitalView;
 
     public Form1()
     {
         InitializeComponent();
-        
-        var hospital = new Hospital("Больница Рахманинова", 10);
-        _hospital = hospital;
-        _view1 = new MainView(_hospital);
-        _view2 = new CreatePatientView(_hospital);
-        _view2.PatientAdded += View2_PatientAdded;
-        
-        ShowView(_view1);
+
+        _registry = new HospitalRegistry();
+        _mainView = new MainView(_registry);
+        _createPatientView = new CreatePatientView(_registry);
+        _createHospitalView = new CreateHospitalView(_registry);
+
+        _createPatientView.PatientAdded += DataChanged;
+        _createHospitalView.HospitalAdded += DataChanged;
+
+        ShowView(_mainView);
     }
 
     private void ShowView(UserControl view)
@@ -26,24 +29,29 @@ public partial class Form1 : Form
         view.Dock = DockStyle.Fill;
         pnlContent.Controls.Add(view);
 
-        if (view == _view1)
+        if (view == _mainView)
         {
-            _view1.RefreshHospital();
+            _mainView.RefreshHospitals();
         }
     }
 
-    private void View2_PatientAdded(object? sender, EventArgs e)
+    private void DataChanged(object? sender, EventArgs e)
     {
-        _view1.RefreshHospital();
-    }
-    
-    private void главнаяToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        ShowView(_view1);
+        _mainView.RefreshHospitals();
     }
 
-    private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+    private void главнаяToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        ShowView(_view2);
+        ShowView(_mainView);
+    }
+
+    private void добавитьПациентаToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        ShowView(_createPatientView);
+    }
+
+    private void добавитьБольницуToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        ShowView(_createHospitalView);
     }
 }

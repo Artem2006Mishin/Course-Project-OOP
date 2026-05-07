@@ -3,33 +3,43 @@ using Models;
 
 public partial class CreatePatientView : UserControl
 {
-    private readonly Hospital _hospital;
+    private readonly HospitalRegistry _registry;
 
     public event EventHandler? PatientAdded;
 
-    public CreatePatientView(Hospital hospital)
+    public CreatePatientView(HospitalRegistry registry)
     {
         InitializeComponent();
-        _hospital = hospital;
+        _registry = registry;
     }
-    
+
     private void btnAdd_Click(object sender, EventArgs e)
     {
         if (!int.TryParse(txtId.Text, out int id))
         {
-            MessageBox.Show("ID должен быть числом");
+            MessageBox.Show("ID пациента должен быть числом");
             return;
         }
-        
+
+        if (!int.TryParse(txtHospitalId.Text, out int hospitalId))
+        {
+            MessageBox.Show("ID больницы должен быть числом");
+            return;
+        }
+
         var patient = new Patient(
             id,
+            hospitalId,
             txtFirstName.Text,
             txtLastName.Text,
             dtpBirth.Value,
-            txtDiagnosis.Text
+            txtDisease.Text,
+            txtDepartment.Text,
+            txtDiseaseSeverity.Text,
+            txtIllnessDuration.Text
         );
-        
-        if (!_hospital.AddPatient(patient, out string error))
+
+        if (!_registry.AddPatient(patient, out string error))
         {
             MessageBox.Show(error);
             return;
@@ -39,13 +49,17 @@ public partial class CreatePatientView : UserControl
         ClearForm();
         PatientAdded?.Invoke(this, EventArgs.Empty);
     }
-    
+
     private void ClearForm()
     {
         txtId.Clear();
+        txtHospitalId.Clear();
         txtFirstName.Clear();
         txtLastName.Clear();
-        txtDiagnosis.Clear();
+        txtDisease.Clear();
+        txtDepartment.Clear();
+        txtDiseaseSeverity.Clear();
+        txtIllnessDuration.Clear();
         dtpBirth.Value = DateTime.Now;
     }
 }
